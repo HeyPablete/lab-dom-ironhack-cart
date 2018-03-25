@@ -12,6 +12,27 @@ function updatePriceByProduct(productPrice, index){
 
 function getTotalPrice() {
 
+  var productsLeng = document.getElementsByClassName('cost-unit').length;
+
+  for(var i=0; i < productsLeng; i++) {
+
+    // Retrieves the unit price of the product
+    var costUnit = parseInt(document.getElementsByClassName('cost-unit')[i].textContent);
+
+    // Retrieves the quantity of items desired
+    var howManyUnits = parseInt(document.getElementById('how-many-units').value);
+
+    // Calculates the total price based on this data
+    var totalPrice = costUnit * howManyUnits;
+
+    // Updates the total price in the DOM
+    var totalPrice_Element = document.getElementsByClassName('total-price')[i];
+    totalPrice_Element.innerHTML = totalPrice;
+    // var totalPrice_TextContent = parseInt(document.getElementsByClassName('total-price')[0].textContent);
+    // var totalPrice_AttValue = parseInt(document.getElementsByClassName('total-price')[0].attributes.value.textContent);
+
+  }
+
 }
 
 function createQuantityInput(){
@@ -37,6 +58,7 @@ function createNewItemRow(itemName, itemUnitPrice){
 function createNewItem(){
 
 }
+
 
 window.onload = function(){
   var calculatePriceButton = document.getElementById('calc-prices-button');

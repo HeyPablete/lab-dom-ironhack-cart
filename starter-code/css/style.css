@@ -1,6 +1,4 @@
-body {
-  background-color: #4cae4c;
-}
+body {}
 
 input {
   border: solid 1px black;
@@ -42,4 +40,21 @@ input {
 
 .quantity {
   margin: 0 5px;
+}
+
+
+
+
+/* mio */
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  background-color: aqua;
+}
+
+.wrapper div {}
+
+.cost-unit::before,
+.total-price::before {
+  content: "$";
 }
