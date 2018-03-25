@@ -8,11 +8,13 @@ function getPriceByProduct(itemNode){
 
 function updatePriceByProduct(productPrice, index){
 
+  
 }
 
 function getTotalPrice() {
 
   var productsLeng = document.getElementsByClassName('cost-unit').length;
+  var currentPrice = 0;
 
   for(var i=0; i < productsLeng; i++) {
 
@@ -32,6 +34,10 @@ function getTotalPrice() {
     // var totalPrice_AttValue = parseInt(document.getElementsByClassName('total-price')[0].attributes.value.textContent);
 
   }
+
+  // voy a poner el total de todos los productos en el ultimo span
+  var spanLeng = document.getElementsByTagName("span").length;
+  var spanTotalPrice = document.getElementsByTagName("span")[spanLeng];
 
 }
 
